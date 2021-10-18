@@ -25,8 +25,12 @@ public class ReceiveIMUValues : MonoBehaviour {
         {
             float w = float.Parse(values[1]);
             float x = float.Parse(values[2]);
-            float y = float.Parse(values[3]);
-            float z = float.Parse(values[4]);
+            //float y = float.Parse(values[3]);
+            //float z = float.Parse(values[4]);
+            //float w = 0;
+            //float x = 0;
+            float y = 0;
+            float z = 0;
             this.transform.localRotation = Quaternion.Lerp(this.transform.localRotation,  new Quaternion(w, y, x, z), Time.deltaTime * speedFactor);
         } else if (values.Length != 5)
         {
