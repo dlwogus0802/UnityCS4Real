@@ -7,7 +7,15 @@ public class Change : MonoBehaviour
 {
     public void SceneChange()
     {
-        SceneManager.LoadScene("IMU");
+        string objectName = transform.parent.tag;
+        if(tag == "stage1")
+        {
+            SceneManager.LoadScene("Projects/IMU/IMU");
+        }
+        else if(tag == "stage2")
+        {
+            SceneManager.LoadScene("IMU2");
+        }
     }
     // Start is called before the first frame update
     void Start()

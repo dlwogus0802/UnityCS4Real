@@ -18,6 +18,7 @@ public class texttest : MonoBehaviour
     void Update()
     {
         float t = tr.eulerAngles.x;
+        //t = 180 - t;
         if (t > 180 && t < 360) t = t - 360;
         angleText.text = t.ToString("F1");
     }
