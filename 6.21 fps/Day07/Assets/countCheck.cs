@@ -6,6 +6,7 @@ using UnityEngine;
 public class countCheck : MonoBehaviour
 {
     public Text CountText;
+    public GameObject btn;
     private int getCount = 0;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class countCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (getCount == 10) btn.gameObject.SetActive(true);
         if (getCount < 10) CountText.text = getCount.ToString();
         else
         {
