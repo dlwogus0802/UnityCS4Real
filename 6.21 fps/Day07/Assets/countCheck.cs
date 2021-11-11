@@ -6,6 +6,7 @@ using UnityEngine;
 public class countCheck : MonoBehaviour
 {
     public Text CountText;
+    public Text DirectText;
     public GameObject btn;
     private int getCount = 0;
     // Start is called before the first frame update
@@ -15,7 +16,25 @@ public class countCheck : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        getCount++;
+        if (other.gameObject.CompareTag("UP"))
+        {
+            DirectText.text = "Down!";
+        }
+        else if(other.gameObject.CompareTag("DOWN"))
+        {
+            DirectText.text = "UP!";
+            getCount++;
+        }
+        else if (other.gameObject.CompareTag("LEFT"))
+        {
+            DirectText.text = "RIGHT!";
+            getCount++;
+        }
+        else if (other.gameObject.CompareTag("RIGHT"))
+        {
+            DirectText.text = "LEFT!";
+            
+        }
     }
     // Update is called once per frame
     void Update()

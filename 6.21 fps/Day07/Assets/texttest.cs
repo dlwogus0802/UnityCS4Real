@@ -20,6 +20,14 @@ public class texttest : MonoBehaviour
         float t = tr.eulerAngles.x;
         //t = 180 - t;
         if (t > 180 && t < 360) t = t - 360;
-        angleText.text = t.ToString("F1");
+        //angleText.text = t.ToString("F1");
+        if(angleText.text == "UP!")
+        {
+            angleText.fontSize = Mathf.RoundToInt(20 + (t) * 0.1f);
+        }
+        else
+        {
+            angleText.fontSize = Mathf.RoundToInt(20 + (t * -1) * 0.1f);
+        }
     }
 }
