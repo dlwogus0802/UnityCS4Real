@@ -9,7 +9,6 @@ public class Change : MonoBehaviour
     private static bool btn2 = false;
     private static bool btn3 = false;
     private static bool btn4 = false;
-    public Slider percentBar;
     public void SceneChange()
     {
         string objectName = transform.parent.tag;
@@ -35,11 +34,11 @@ public class Change : MonoBehaviour
     {
         if (tag == "stage1" && btn1)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
         if (tag == "stage2" && btn2)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
 
     }
