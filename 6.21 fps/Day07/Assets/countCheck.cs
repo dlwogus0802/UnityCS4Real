@@ -22,13 +22,15 @@ public class countCheck : MonoBehaviour
         }
         else if(other.gameObject.CompareTag("DOWN"))
         {
+            if (DirectText.text == "Down!") getCount++;
             DirectText.text = "UP!";
-            getCount++;
+            //getCount++;
         }
         else if (other.gameObject.CompareTag("LEFT"))
         {
+            if (DirectText.text == "LEFT!") getCount++;
             DirectText.text = "RIGHT!";
-            getCount++;
+            
         }
         else if (other.gameObject.CompareTag("RIGHT"))
         {
